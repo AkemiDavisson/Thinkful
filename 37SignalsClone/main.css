@@ -1,64 +1,312 @@
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/  
+   v2.0 | 20110126 
+   License: none (public domain) 
 */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video
-{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
+  
+html, body, div, span, applet, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, 
+a, abbr, acronym, address, big, cite, code, 
+del, dfn, em, img, ins, kbd, q, s, samp, 
+small, strike, strong, sub, sup, tt, var, 
+b, u, i, center, 
+dl, dt, dd, ol, ul, li, 
+fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td, 
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, 
+time, mark, audio, video 
+{ 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    font-size: 100%; 
+    font: inherit; 
+    vertical-align: baseline; 
+} 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section
-{
-    display: block;
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section 
+{ 
+    display: block; 
+} 
+  
+body 
+{ 
+    line-height: 1; 
+} 
+  
+ol, ul 
+{ 
+    list-style: none; 
+} 
+  
+blockquote, q 
+{ 
+    quotes: none; 
+} 
+  
+    blockquote:before, blockquote:after, 
+    q:before, q:after 
+    { 
+        content: ''; 
+        content: none; 
+    } 
+  
+table 
+{ 
+    border-collapse: collapse; 
+    border-spacing: 0; 
+} 
+  
+div 
+{ 
+    display: block; 
+} 
+  
+body 
+{ 
+    height: 100%; 
+    min-height: 100%; 
+    display: block; 
+    margin: 8px; 
+    padding: 30px; 
+    text-align: center; 
+    background-color: #fff; 
+    color: #222; 
+    font-family: "ProximaNova", Helvetica, Arial, "Lucida Grande", Verdana, sans-serif; 
+    font-size: 18px; 
+    line-height: 1.5em; 
+} 
+  
+a:hover 
+{ 
+    color: #6699cc; 
+} 
+  
+  
+h1, h2, h3, h4, h5
+{ 
+    font-family: "CrimsonSemibold", "Times New Roman", Georgia, serif; 
+} 
+  
+h1
+{ 
+    display: block; 
+    font-weight: 500; 
+    font-style: normal; 
+    font-size: 58px; 
+    line-height: 1.0em; 
+    margin-bottom: 20px; 
+    letter-spacing: -2px; 
+    color: #232323; 
+} 
+  
+div.nav 
+{ 
+    text-align: right; 
+    padding: 10px; 
+    margin: -30px 0 20px 0; 
+} 
+  
+    div.nav ul 
+    { 
+        margin: 0; 
+        padding: 0; 
+    } 
+  
+        div.nav ul li 
+        { 
+            display: inline; 
+            margin: 0; 
+            padding: 0 10px 0; 
+            font-size: 12px; 
+            font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; 
+        } 
+  
+            div.nav ul li.weekday 
+            { 
+                float: left; 
+                padding-top: 4px; 
+                color: #999; 
+            } 
+  
+            div.nav ul li a.signin 
+            { 
+                color: #18afe0; 
+            } 
+  
+            div.nav ul li a 
+            { 
+                text-decoration: none; 
+                color: #369; 
+            } 
+  
+             div.nav ul li a:hover 
+            { 
+                text-decoration: none; 
+                color: #6699cc; 
+            } 
+  
+div.container 
+{ 
+    margin: 0 auto 0; 
+    width: 820px; 
+    padding: 0; 
+} 
+  
+div.box-container 
+{ 
+    padding-left: 15px; 
+    margin-top: 10px; 
+    width: 820px; 
+    overflow: hidden; 
+    margin-bottom: 40px; 
+} 
+  
+    div.box-container div.headline 
+    { 
+        width: 820px; 
+        margin-left: -20px; 
+    } 
+  
+div.box 
+{ 
+    width: 160px; 
+    margin: 15px 20px 5px; 
+    border: 1px solid #e8e8e8; 
+    border-radius: 5px; 
+    padding: 20px 10px 10px; 
+    float: left; 
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#efefef)); 
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; 
+} 
+  
+    div.box h3
+    { 
+        font-size: 21px; 
+        color: #369; 
+        margin: 3px 0 0 10px; 
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; 
+        font-weight: bold; 
+    } 
+  
+        div.box h3 span 
+        { 
+            text-decoration: underline; 
+        } 
+  
+    div.box h4
+    { 
+        margin: 5px 0 10px; 
+        font-size: 14px; 
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; 
+        color: #cc0000; 
+        font-weight: bold; 
+    } 
+  
+    div.box p 
+    { 
+        color: #222; 
+        font-size: 14px; 
+        line-height: 1.4em; 
+        margin-top: 5px; 
+        font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif; 
+    } 
+  
+hr 
+{ 
+    clear: both; 
+    border: 0; 
+    background: white url(/Content/Images/asteriks.png) no-repeat scroll 50% 50%; 
+    color: transparent; 
+    height: 12px; 
+} 
+  
+div.box div.product 
+{ 
+    display: none; 
+    position: absolute; 
+    margin: -215px 0 0 -97px; 
+    background-color: #fff; 
+    width: 825px; 
+    height: 180px; 
+} 
+  
+    div.box div.product h1
+    { 
+        display: block; 
+        font-weight: 500; 
+        font-style: normal; 
+        font-size: 46px; 
+        line-height: 1.0em; 
+        margin: 10px 0 15px 0; 
+        letter-spacing: -1px; 
+        color: #232323; 
+    } 
+  
+    div.box div.product span 
+    { 
+        text-decoration: underline; 
+        color: #369; 
+  
+    } 
+  
+    div.box div.product p 
+    { 
+        font-size: 15px; 
+    } 
+  
+    div.box div.product.basecamp 
+    { 
+        z-index: 2; 
+    } 
+  
+div.box:hover div.product.basecamp 
+{ 
+    display: block; 
+} 
+  
+  
+  
+div.box div.product.basecamp img.arrow 
+{ 
+    float: left; 
+    margin-left: 230px; 
+    z-index: 100; 
+} 
+  
+  
+div.box div.product.highrise 
+{ 
+    margin: -215px 0 0 -320px; 
+    position:absolute; 
+} 
+  
+div.box div.product.highrise img.arrow 
+{ 
+    margin-left: 120px; 
+    z-index: 100; 
+} 
+  
+div.box:hover div.product.highrise 
+{ 
+    display: block; 
+} 
+  
+div.box div.product.campfire 
+{ 
+    margin: -215px 0 0 -545px; 
+    position:absolute; 
+} 
+  
+div.box div.product.campfire img.arrow 
+{ 
+    margin-left: 300px; 
+    z-index: 100; 
+} 
+  
+div.box:hover div.product.campfire 
+{ 
+    display: block; 
 }
-
-body
-{
-    line-height: 1;
-}
-
-ol, ul
-{
-    list-style: none;
-}
-
-blockquote, q
-{
-    quotes: none;
-}
-
-    blockquote:before, blockquote:after,
-    q:before, q:after
-    {
-        content: '';
-        content: none;
-    }
-
-table
-{
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-
