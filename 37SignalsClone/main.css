@@ -218,7 +218,7 @@ hr
 { 
     clear: both; 
     border: 0; 
-    background: white url(/Content/Images/asteriks.png) no-repeat scroll 50% 50%; 
+    background: white url(Images/asteriks.png) no-repeat scroll 50% 50%; 
     color: transparent; 
     height: 12px; 
 } 
