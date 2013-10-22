@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>37Signals Clone</title>
+    <link rel="icon" type="image/png" href="Images/37signalsfavicon.png" />
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li class="weekday">
+                <script type="text/javascript">
+                    var weekday = new Array("Sunday", "Monday", "Tuesday", "Wednesday",
+                                  "Thursday", "Friday", "Saturday");
+                    var now = new Date();
+                    document.write("Happy " + weekday[now.getDay()] + ".");
+                </script>
+            </li>
+            <li>
+                <a href="#">Company Blog</a>
+            </li>
+            <li>
+                <a href="#">Our story</a>
+            </li>
+            <li>
+                <a href="#">Follow us on Twitter</a>
+            </li>
+            <li>
+                <a href="#">System status</a>
+            </li>
+            <li>
+                <a href="#" class="signin">Sign in</a>
+            </li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="container">
+        <img src="Images/logo-37s-large.png" alt="37Signals" />
+        <div class="box-container">
+            <div class="headline">
+                <h1>Making collaboration productive and enjoyable for people every day.</h1>
+                <h5>Frustration-free web-based apps for collaboration, sharing information, and making decisions.</h5>
+            </div>
+            <div class="box" style="margin-left: 80px;">
+                <div class="product basecamp">
+                    <h1><span>Basecamp</span> is the project management tool you wish you had on your last project.</h1>
+                    <p>Are you still managing projects with email? Are you still using Excel for your to-do lists? It’s time to upgrade to Basecamp. Manage projects and collaborate with your team and clients the modern way.</p>
+                    <img src="Images/arrow-left.png" alt="arrow" class="arrow" />
+                </div>
+                <img src="Images/logo-bc.png" alt="basecamp"/>
+                <h3>
+                    <span>Basecamp</span>
+                    <sup>®</sup>
+                </h3>
+                <h4>Manage Projects</h4>
+                <p>Used by millions for project management.</p>
+            </div>
+            <div class="box">
+                <div class="product highrise">
+                    <h1><span>Highrise</span> remembers the important things about people you’d normally forget.</h1>
+                    <p>Keep a permanent record of people you do business with. Know who you talked to, when you talked to them, what was said, and when to follow up next. Over 20,000,000 contacts are tracked using Highrise.</p>
+                    <img src="Images/arrow-left.png" alt="arrow" class="arrow">
+                </div>
+                <img src="Images/logo-hr.png" alt="highrise" />
+                <h3>
+                    <span>Highrise</span>
+                    <sup>®</sup>
+                </h3>
+                <h4>Manage Contacts</h4>
+                <p>Know the people you do business with.</p>
+            </div>
+            <div class="box">
+                <div class="product campfire">
+                    <h1>From near or far, <span>Campfire</span> helps teams work together over the web in real-time.</h1>
+                    <p>Share ideas, discussions, concepts, images, code samples, videos, mockups, and documents in a real-time private chat room. It’s game changing. We couldn’t run our own business without Campfire.</p>
+                    <img src="Images/arrow-right.png" alt="arrow" class="arrow">
+                </div>
+                <img src="Images/logo-cf.png" alt="campfire" />
+                <h3>
+                    <span>Campfire</span>
+                    <sup>®</sup>
+                </h3>
+                <h4>Work in Real-Time</h4>
+                <p>Group chat rooms for your business</p>
+            </div>
+        </div>
+        <hr />
+    </div>
+</body>
+</html>
+
