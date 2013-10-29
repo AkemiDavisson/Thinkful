@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <title>Hot Cold App</title>
+    <link rel="stylesheet" href="Content/Styles/main.css" />
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="Content/Scripts/HotColdScript.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1><span id="hotTitle">Hot</span> or <span id="coldTitle">Cold?</span></h1>
+    <div id="wrapper">
+        <div class="arrows">
+            <img src="Content/Images/blueArrowRight.png" class="hotArrow" />
+            <img src="Content/Images/blueArrowLeft.png" class="coldArrow" />
+        </div>
+        <div class="image">
+            <img src="http://morganmassage.com/wp-content/uploads/2011/10/hot_cold_water_faucets.jpg" />
+        </div>
+        <div id="directions">Guess a number between 1 and 100!</div>
+        <div class="hotCold">
+            <div id="guessHere">Your Guess here:</div>
+            <input type="text" name="guess" class="guess" id="guess" maxlength="3" autocomplete="off" />
+            <button name="startOver" id="submit" class="button">submit</button>
+            <div id="hotColdDisplay"></div>
+        </div>
+        <div>
+            <button name="startOver" id="startOver" class="button">Start Over!</button>
+        </div>
+    </div>
+</body>
+</html>
+
