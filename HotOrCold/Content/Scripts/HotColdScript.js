@@ -96,6 +96,7 @@
 
         $('.coldArrow').fadeOut('slow')
             .css('display', 'none');
+        return;
     }
 
     //Points arrow at cold
@@ -106,13 +107,16 @@
 
         $('.hotArrow').fadeOut('slow')
             .css('display', 'none');
+        return;
     }
 
     //Check for 'hotter' 'colder'
     function hotOrCold(prevDistance, distance, guess, answer) {
 
         //hotter (within 10 numbers)
-        if (prevDistance > distance && distance <= 10) {
+        if (prevDistance >= distance && distance <= 10) {
+
+            hotArrow();
 
             if (guess < answer) {
                 $('#hotColdDisplay').html('Hot hot hot! Guess higher!')
@@ -122,11 +126,11 @@
                 $('#hotColdDisplay').html('Hot hot hot! Guess lower!')
                     .css({ color: 'FireBrick ' });
             }
-
-            hotArrow();
         }
             //warmer
-        else if (prevDistance > distance && distance <= 20) {
+        else if (prevDistance >= distance && distance <= 20) {
+
+            hotArrow();
 
             if (guess < answer) {
                 $('#hotColdDisplay').html('Getting warmer...guess higher!')
@@ -136,12 +140,11 @@
                 $('#hotColdDisplay').html('Getting warmer...guess lower!')
                     .css({ color: 'FireBrick ' });
             }
-
-            hotArrow();
-
         }
             //Luke warm
         else if (prevDistance > distance) {
+
+            hotArrow();
 
             if (guess < answer) {
                 $('#hotColdDisplay').html('Luke warm...guess higher!')
@@ -151,12 +154,11 @@
                 $('#hotColdDisplay').html('Luke warm...guess lower!')
                     .css({ color: 'FireBrick ' });
             }
-
-            hotArrow();
-
         }
         //Colder
-        if (prevDistance < distance) {
+        if (prevDistance <= distance) {
+
+            coldArrow();
 
             if (guess < answer) {
                 $('#hotColdDisplay').html('Brr, freezing cold...guess higher!')
@@ -167,9 +169,6 @@
                 $('#hotColdDisplay').html('Brr, freezing cold... guess lower!')
                     .css({ color: 'DodgerBlue' });
             }
-
-            coldArrow();
-
         }
 
         attempts = attempts + 1;
