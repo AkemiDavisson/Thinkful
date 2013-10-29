@@ -37,6 +37,11 @@
         } else if (guess > 100 || guess < 1) {
             $('#hotColdDisplay').html("Error: Must be between 1 and 100").css({ color: 'red' });
             $('.guess').val('');
+
+            return false;
+        }
+        else if (isNaN(guess) == true) {
+            $('#hotColdDisplay').html('Please enter a number.');
             return false;
         }
         return true;
@@ -76,6 +81,7 @@
             console.log('Too high');
             $('#hotColdDisplay').html('Too high, guess lower!');
         }
+        
         attempts = attempts + 1;
        
     }
@@ -114,6 +120,8 @@
        
         attempts = attempts + 1;
     };
+
+    //Push startOver button, reset defaults, gives random number. 
 
     $('#startOver').click(function (e) {
         e.preventDefault();
