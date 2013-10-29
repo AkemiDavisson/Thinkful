@@ -123,6 +123,7 @@
         $('.hotArrow').fadeOut('slow').css('display', 'none')
         $('#hotColdDisplay').html('');
         prevDistance = null;
+        attempts = 1;
         $('.guess').val('');
     });
 });
