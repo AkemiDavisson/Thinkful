@@ -8,7 +8,6 @@
     //load youtube api and videos on load
     loadPlayers();
 
-    //gives time for api to load
     introScreen();
 
     //displays 1st question after countdown
@@ -17,14 +16,58 @@
         countDown();
     });
 
+    //check answer on submit
     submitButton.on('click', function () {
         questionManager.checkAnswer();
     });
 
+    //next question
     nextButton.on('click', questionManager.displayQuestion);
 
+    //reset quiz
     tryAgainButton.on('click', questionManager.resetQuiz);
 });
+
+//Questions object, holds questions, multiple choice answers, correct answer, and videoId. 
+questionsObject = {
+
+    q1: {
+        question: "Who is the first dwarf to come to Bilbo’s door at the beginning of The Hobbit?",
+        mcanswers: ["Fili", "Bofur", "Dwalin", "Kili"],
+        correctanswer: "Dwalin",
+        videoCode: "GZC7dgPqW4c"
+    },
+    q2: {
+        question: "What is the name of the home where Elrond and his elves live?",
+        mcanswers: ["Lake Town", "Mirkwood", "Bag End", "Rivendell"],
+        correctanswer: "Rivendell",
+        videoCode: "t9L8Er_oqAQ"
+    },
+    q3: {
+        question: "When is Durin's Day?",
+        mcanswers: ["On an honest-to-gosh Blue Moon",
+        "The Hunter's Moon",
+        "The first day of the last moon of autumn",
+        "The Harvest Moon"
+        ],
+        correctanswer: "The first day of the last moon of autumn",
+        videoCode: "-JzKklW9fR4"
+    },
+    q4: {
+        question: "Who are the two youngest dwarves?",
+        mcanswers: ["Oin and Gloin", "Nori and Ori", "Fili and Kili", "Bifur and Bofur"],
+        correctanswer: "Fili and Kili",
+        videoCode: "v4y_B3ep4EU"
+    },
+
+    q5: {
+        question: "What is the name of the creature Bilbo encounters in the goblin caves?",
+        mcanswers: ["Bard", "Gollum", "Beorn", "Smeagal"],
+        correctanswer: "Gollum",
+        videoCode: "haRsNCoLnHQ"
+    }
+
+};
 
 function introScreen() {
 
@@ -51,12 +94,12 @@ function countDown() {
 
 };
 
-//nested functions inner function is private and forms a closure
+//Question manager 
 var questionManager = (function () {
     var currentNumber = 1;
     var correctAnswers = 0;
 
-    //self explanatory
+    //shows current question
     function displayQuestion() {
 
         if (currentNumber <= 5) {
@@ -65,17 +108,16 @@ var questionManager = (function () {
             updateElementsToDisplay();
 
             //current question position 
-            var questionNumber = questionsObject['q' + currentNumber];
-
+            var currentQuestion = questionsObject['q' + currentNumber];
             var answer = $('label.answer');
 
             //Set question 
-            $('.question').text(questionNumber.question);
+            $('.question').text(currentQuestion.question);
 
             //Loop to add multiple choice answers to the form
-            for (var i = 0; i < questionNumber.mcanswers.length; i++) {
+            for (var i = 0; i < currentQuestion.mcanswers.length; i++) {
                 answer.eq(i).html('<input type="radio" name="choice"/>'
-                    + questionNumber.mcanswers[i]);
+                    + currentQuestion.mcanswers[i]);
             }
         }
 
@@ -85,9 +127,9 @@ var questionManager = (function () {
 
     };
 
-    //Updates element to display place in quiz/correct answers
+    //Updates element to display in quiz 
     function updateElementsToDisplay() {
-    
+
         $('#error, #counter, .next').addClass('hidden');
 
         $('#questionNumber').text('Question ' + currentNumber + " out of 5");
@@ -98,11 +140,8 @@ var questionManager = (function () {
     //on submit, checks answer 
     function checkAnswer() {
 
-        //current question position
-        var questionNumber = questionsObject['q' + currentNumber];
-        //correct answer
-        var answer = questionNumber.correctanswer;
-
+        var currentQuestion = questionsObject['q' + currentNumber];
+        var answer = currentQuestion.correctanswer;
         var userAnswer = $('input[type=radio]:checked').parent().text();
 
         //check for blanks 
@@ -111,14 +150,15 @@ var questionManager = (function () {
             $('#error').removeClass('hidden')
         }
         else {
-            //hide error message
             $('#error').addClass('hidden');
 
+            //correct answer
             if (userAnswer == answer) {
 
                 correctAnswers++;
                 answerResult(answer + " is correct!");
             }
+                //incorrect answer
             else {
 
                 answerResult("Incorrect, the correct answer was " + answer);
@@ -130,10 +170,10 @@ var questionManager = (function () {
         }
     };
 
-    //displays answer result page
+    //displays answer result page and video
     function answerResult(message) {
-        //hide quiz elements
         $('.quizform, #questionNumber, #correctAnswers, .submit').addClass('hidden');
+        $('.next').removeClass('hidden');
 
         //show correct/incorrect message animate to fade
         $(".question").animate({ opacity: 0 }, function () {
@@ -141,12 +181,8 @@ var questionManager = (function () {
                 .animate({ opacity: 1 });
         })
 
-        //show next button
-        $('.next').removeClass('hidden');
-
         //call video clip
         displayVideo(currentNumber);
-
     };
 
     //Method after quiz finished
@@ -176,11 +212,10 @@ var questionManager = (function () {
 
     //Reset/restart quiz
     function resetQuiz() {
-        //return variables to default
+        //return variables to default/reset quiz form
         currentNumber = 1;
         correctAnswers = 0;
 
-        //hide try again button
         $('.tryAgain').addClass('hidden');
         $('#correctAnswers').text('');
 
@@ -197,10 +232,9 @@ var questionManager = (function () {
 
 })();
 
+var player1, player2, player3, player4, player5, player6, player7;
 
 //Creates an Iframe and YoutubePlayer on page load
-var player1, player2, player3, player4, player5, player6;
-
 function loadPlayers() {
     //load youtube api
     var tag = document.createElement('script');
@@ -266,7 +300,7 @@ function loadPlayers() {
 
 };
 
-//displays video based on question number
+//Switch statement displays video based on current question number
 function displayVideo(currentNumber) {
     var nextButton = $(".next");
 
@@ -356,44 +390,3 @@ function displaySneakPeak(correctAnswers) {
 };
 
 
-//Question manager object, holds questions, multiple choic answers and correct answer. 
-questionsObject = {
-
-    //object literal syntax
-    q1: {
-        question: "Who is the first dwarf to come to Bilbo’s door at the beginning of The Hobbit?",
-        mcanswers: ["Fili", "Bofur", "Dwalin", "Kili"],
-        correctanswer: "Dwalin",
-        videoCode: "GZC7dgPqW4c"
-    },
-    q2: {
-        question: "What is the name of the home where Elrond and his elves live?",
-        mcanswers: ["Lake Town", "Mirkwood", "Bag End", "Rivendell"],
-        correctanswer: "Rivendell",
-        videoCode: "t9L8Er_oqAQ"
-    },
-    q3: {
-        question: "When is Durin's Day?",
-        mcanswers: ["On an honest-to-gosh Blue Moon",
-        "The Hunter's Moon",
-        "The first day of the last moon of autumn",
-        "The Harvest Moon"
-        ],
-        correctanswer: "The first day of the last moon of autumn",
-        videoCode: "-JzKklW9fR4"
-    },
-    q4: {
-        question: "Who are the two youngest dwarves?",
-        mcanswers: ["Oin and Gloin", "Nori and Ori", "Fili and Kili", "Bifur and Bofur"],
-        correctanswer: "Fili and Kili",
-        videoCode: "v4y_B3ep4EU"
-    },
-
-    q5: {
-        question: "What is the name of the creature Bilbo encounters in the goblin caves?",
-        mcanswers: ["Bard", "Gollum", "Beorn", "Smeagal"],
-        correctanswer: "Gollum",
-        videoCode: "haRsNCoLnHQ"
-    }
-
-};
