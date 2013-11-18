@@ -163,7 +163,7 @@ var questionManager = (function () {
             displaySneakPeak(correctAnswers);
         }
             //Good score
-        else if (correctAnswers >= 4) {
+        else if (correctAnswers == 4) {
 
             $('.question').text('Great job! Thanks for playing!');
             displaySneakPeak(correctAnswers);
@@ -344,7 +344,7 @@ function displaySneakPeak(correctAnswers) {
             $('#player6').hide();
         })
     }
-    else if (correctAnswers >= 4) {
+    else if (correctAnswers == 4) {
         $('#player7').show();
         player7.seekTo(0);
         player7.playVideo();
