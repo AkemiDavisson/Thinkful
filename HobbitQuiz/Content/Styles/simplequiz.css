@@ -1,0 +1,222 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+{
+    display: block;
+}
+
+body
+{
+    line-height: 1;
+}
+
+ol, ul
+{
+    list-style: none;
+}
+
+blockquote, q
+{
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after
+    {
+        content: '';
+        content: none;
+    }
+
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+div
+{
+    display: block;
+}
+
+
+html
+{
+    background: url(../Images/the-hobbit-movie-background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    display: block;
+}
+
+body
+{
+    font-family: Gabriola;
+    height: 100%;
+    text-align: center;
+    font-size: 25px;
+    min-width: 1000px;
+}
+
+header
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+    header img
+    {
+        max-width: 40%;
+        width: 600px;
+    }
+
+#error
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: #760000;
+}
+
+
+#questionNumber
+{
+    position: relative;
+}
+
+#correctAnswers
+{
+    position: relative;
+    bottom: 20px;
+}
+
+.hidden
+{
+    display: none;
+}
+
+input
+{
+    font-family: Gabriola;
+}
+
+.quizSection
+{
+    min-width: 1000px;
+    border: 2px solid rgba(206, 101, 9, 0.84);
+    border-radius: 5px;
+    width: 50%;
+    margin: 20px auto;
+    background: rgba(138, 185, 120, 0.79);
+}
+
+    .quizSection p
+    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 35px;
+        font-weight: bold;
+    }
+
+    .quizSection form
+    {
+        margin-top: 20px;
+        margin-bottom: 30px;
+        padding: 0px 300px 0px 300px;
+        text-align: left;
+    }
+
+    .quizSection input
+    {
+        margin-right: 10px;
+    }
+
+    .quizSection .submit
+    {
+        padding: 0px 25px;
+        margin: 0px 0px 30px 0px;
+        border: none;
+        border-radius: 5px;
+        background: #077553;
+        text-decoration: none;
+        font-size: 28px;
+        color: #ffffff;
+        cursor: pointer;
+        box-shadow: 1px 1px 5px rgba(102, 0, 0, 0.5);
+    }
+
+    /*#player
+{
+    display:none;
+}*/
+    .quizSection .next
+    {
+        padding: 0px 25px;
+        margin: 0px 0px 30px 0px;
+        border: none;
+        border-radius: 5px;
+        background: #077553;
+        text-decoration: none;
+        font-size: 28px;
+        color: #ffffff;
+        cursor: pointer;
+        box-shadow: 1px 1px 5px rgba(102, 0, 0, 0.5);
+    }
+
+    .quizSection .tryAgain
+    {
+        padding: 0px 25px;
+        margin: 0px 0px 30px 0px;
+        border: none;
+        border-radius: 5px;
+        background: #077553;
+        text-decoration: none;
+        font-size: 28px;
+        color: #ffffff;
+        cursor: pointer;
+        box-shadow: 1px 1px 5px rgba(102, 0, 0, 0.5);
+    }
+
+    .quizSection .continue
+    {
+        padding: 0px 25px;
+        margin: 0px 0px 30px 0px;
+        border: none;
+        border-radius: 5px;
+        background: #077553;
+        text-decoration: none;
+        font-size: 28px;
+        color: #ffffff;
+        cursor: pointer;
+        box-shadow: 1px 1px 5px rgba(102, 0, 0, 0.5);
+    }
+#counter
+{
+    font-size: 50px;
+}

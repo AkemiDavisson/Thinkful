@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Hobbit Quiz</title>
+    <link rel="icon" type="image/png" href="Content/Images/faviconAD.ico" />
+    <link rel="stylesheet" href="Content/Styles/simplequiz.css" />
+    <script src="Content/Scripts/jquery-1.9.1.js"></script>
+    <script src="Content/Scripts/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="Content/Scripts/SimpleQuizScript.js" type="text/javascript"></script>
+</head>
+<body>
+    <ul class="videoMenu">
+        <li>
+            <span></span>
+        </li>
+    </ul>
+
+    <header>
+        <img src="Content/Images/TheHobbitHeader.png" />
+    </header>
+    <span id="error">Please choose an answer!</span>
+    <div class="quizSection">
+        <p class="question">Question here</p>
+        <span id="counter"></span>
+        <div id="player"></div>
+        <div id="player2"></div>
+        <div id="player3"></div>
+        <div id="player4"></div>
+        <div id="player5"></div>
+        <div id="player6"></div>
+        <div id="player7"></div>
+        <span id="questionNumber">1</span><br />
+        <form class="quizform">
+            <label class="answer">
+                <input name="choice" type="radio" /></label><br />
+            <label class="answer">
+                <input name="choice" type="radio"></label><br />
+            <label class="answer">
+                <input name="choice" type="radio" /></label><br />
+            <label class="answer">
+                <input name="choice" type="radio" /></label><br />
+        </form>
+        <input class="continue" type="button" value="Continue" />
+        <input class="submit" type="button" value="Submit" />
+        <input id="1" class="next hidden" type="button" value="Next" />
+        <input class="tryAgain hidden" type="button" value="Try Again" />
+        <br />
+        <span id="correctAnswers"></span>
+    </div>
+</body>
+</html>
