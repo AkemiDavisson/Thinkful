@@ -10,13 +10,7 @@
     <script src="Content/Scripts/SimpleQuizScript.js" type="text/javascript"></script>
 </head>
 <body>
-    <ul class="videoMenu">
-        <li>
-            <span></span>
-        </li>
-    </ul>
-
-    <header>
+      <header>
         <img src="Content/Images/TheHobbitHeader.png" />
     </header>
     <span id="error">Please choose an answer!</span>
@@ -32,14 +26,20 @@
         <div id="player7"></div>
         <span id="questionNumber">1</span><br />
         <form class="quizform">
-            <label class="answer">
-                <input name="choice" type="radio" /></label><br />
-            <label class="answer">
-                <input name="choice" type="radio"></label><br />
-            <label class="answer">
-                <input name="choice" type="radio" /></label><br />
-            <label class="answer">
-                <input name="choice" type="radio" /></label><br />
+           <ul>
+                <li>
+                    <label class="answer">
+                        <input name="choice" type="radio" /></label></li>
+                <li>
+                    <label class="answer">
+                        <input name="choice" type="radio" /></label></li>
+                <li>
+                    <label class="answer">
+                        <input name="choice" type="radio" /></label></li>
+                <li>
+                    <label class="answer">
+                        <input name="choice" type="radio" /></label></li>
+            </ul>
         </form>
         <input class="continue" type="button" value="Continue" />
         <input class="submit" type="button" value="Submit" />

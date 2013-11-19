@@ -157,11 +157,15 @@ input
         margin-right: 10px;
     }
 
-    .quizSection label
+   .quizSection label
     {
         display: inline-block;
-        margin-top: 3px;
-        margin-bottom: 3px;
+    }
+
+    .quizSection li
+    {
+        margin: 5px 0px 5px 0px;
+        display: block;
     }
 
     .quizSection .submit
