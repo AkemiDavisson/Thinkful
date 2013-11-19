@@ -254,7 +254,7 @@ function loadPlayers() {
             width: "854",
             height: "480",
             videoId: questionsObject['q2'].videoCode,
-            playerVars: { 'autoplay': 0 }
+            playerVars: { 'autoplay': 0 , 'start': 10}
         });
         player3 = new YT.Player('player3', {
             width: "854",

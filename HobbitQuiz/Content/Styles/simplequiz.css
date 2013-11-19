@@ -157,6 +157,13 @@ input
         margin-right: 10px;
     }
 
+    .quizSection label
+    {
+        display: inline-block;
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
     .quizSection .submit
     {
         padding: 0px 25px;
@@ -216,6 +223,7 @@ input
         cursor: pointer;
         box-shadow: 1px 1px 5px rgba(102, 0, 0, 0.5);
     }
+
 #counter
 {
     font-size: 50px;
