@@ -29,7 +29,7 @@
     });
 
     //select checkbox when clicking li element
-    itemsList.on("click", "li", itemClick);
+    itemsList.on("click", "li", itemClick); 
 
     //select checkbox when click checkbox
     itemsList.on("click", "input[type=checkbox]", itemClick);
@@ -79,6 +79,8 @@ function addItem() {
 
 //checks boxes on click (li and checkbox)
 function itemClick(event) {
+
+
     $(this).find("input[type=checkbox]").click();
 
     updateCompletedBtn();
@@ -123,8 +125,11 @@ function editItemOnDblClick(event) {
 
 //opens editing for item on btn click
 function editItemOn(event) {
+
     var input = $(this).parent().find("input[type=text]");
     var span = $(this).parent().find("span");
+
+    event.stopPropagation(); // Don't bubble up the event to the enclosing <li> element ?? 
 
     span.hide();
     input.show().focus();

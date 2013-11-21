@@ -63,42 +63,41 @@ body
 {
     text-align: center;
     font-family: Tahoma;
-    background: url('../Images/washi.png');
-    overflow: hidden;
-}
-
-.wrapper
-{
-    background: rgba(15, 96, 184, 0.59);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: calc(100% + 1000px);
-    min-height: 400px;
+    background: url('../Images/trEgg.jpg)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 h1
 {
     font-size: 50px;
-    font-family: monospace;
+    font-family: Kalinga;
     font-weight: 600;
-    color: rgba(28, 0, 138, 0.89);
+    color: rgba(0, 224, 126, 0.89);
     margin-top: 20px;
 }
 
 h2
 {
     font-size: 30px;
-    font-family: monospace;
+    font-family: Kalinga;
     font-weight: 600;
-    color: #FFF500;
+    color: #FFEB00;
     margin: 20px 0px 30px 0px;
 }
 
 header
 {
-   margin-top: 60px;
+    margin-top: 60px;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    right: 5px;
 }
 
 .main
@@ -123,7 +122,7 @@ header
     #itemForm input
     {
         width: 500px;
-        font-family: monospace;
+        font-family: Kalinga;
         margin: auto;
         padding: 5px 10px;
         border: 1px solid #000;
@@ -134,7 +133,7 @@ header
 
     #itemForm a
     {
-        font-family: monospace;
+        font-family: Kalinga;
         padding: 5px 30px;
         margin: 10px;
         border-radius: 5px;
@@ -175,7 +174,7 @@ header
 
         #itemsList li input[type="text"]
         {
-            font-family: monospace;
+            font-family: Kalinga;
             width: 650px;
             display: none;
             font-size: 18px;
@@ -194,13 +193,13 @@ header
 
 #itemsList li a
 {
-    font-family: monospace;
+    font-family: Kalinga;
     font-size: 16px;
     margin: auto;
     width: 10%;
     height: 20%;
     display: none;
-    background: #F95A00;
+    background: rgba(0, 18, 150, 0.92);
     color: white;
     padding: 5px 0px 13px 0px;
     text-align: center;
@@ -219,7 +218,7 @@ header
 
 span
 {
-    font-family: monospace;
+    font-family: Kalinga;
     font-size: 20px;
 }
 
@@ -231,7 +230,7 @@ span
 
     #buttons #selectItemBtn
     {
-        font-family: monospace;
+        font-family: Kalinga;
         padding: 5px 30px;
         margin: 10px;
         border: none;
@@ -246,7 +245,7 @@ span
 
         #buttons #selectItemBtn:disabled
         {
-            font-family: monospace;
+            font-family: Kalinga;
             padding: 5px 30px;
             margin: 10px;
             border: none;
@@ -261,7 +260,7 @@ span
 
     #buttons #completeItemBtn:disabled
     {
-        font-family: monospace;
+        font-family: Kalinga;
         padding: 5px 30px;
         margin: 10px;
         border: none;
@@ -277,7 +276,7 @@ span
 
     #buttons #completeItemBtn
     {
-        font-family: monospace;
+        font-family: Kalinga;
         padding: 5px 30px;
         margin: 10px;
         border: none;
