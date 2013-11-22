@@ -96,7 +96,7 @@ header
 footer
 {
     position: absolute;
-    bottom: 0;
+    bottom: 3px;
     right: 5px;
 }
 
